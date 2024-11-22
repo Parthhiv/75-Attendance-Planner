@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blossoming Flower</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .flower {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation: grow 5s infinite ease-in-out;
+    }
+
+    .flower .petal {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(circle, #ff6ec4, #ff3e8e);
+      border-radius: 50%;
+      transform-origin: bottom center;
+      animation: bloom 5s infinite ease-in-out;
+    }
+
+    .flower .petal:nth-child(1) { transform: rotate(0deg); }
+    .flower .petal:nth-child(2) { transform: rotate(45deg); }
+    .flower .petal:nth-child(3) { transform: rotate(90deg); }
+    .flower .petal:nth-child(4) { transform: rotate(135deg); }
+    .flower .petal:nth-child(5) { transform: rotate(180deg); }
+    .flower .petal:nth-child(6) { transform: rotate(225deg); }
+    .flower .petal:nth-child(7) { transform: rotate(270deg); }
+    .flower .petal:nth-child(8) { transform: rotate(315deg); }
+
+    .flower .center {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, #ffb347, #ffcc33);
+      border-radius: 50%;
+      top: 35px;
+      left: 35px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes grow {
+      0%, 100% { transform: scale(0.8); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes bloom {
+      0%, 100% { transform: scale(0.8); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Watch the Flower Blossom 🌸</h1>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+</body>
+</html>
